@@ -25,7 +25,7 @@ SECRET_KEY = 'jktotbaxe0&!8l5u-6ixaih=tt%5lhk)pmzf9j4&$#%qe86l7&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['trans-stats-mclorimer.c9users.io']
+ALLOWED_HOSTS = ['trans-stats-mclorimer.c9users.io', '127.0.0.1']
 
 
 # Application definition
