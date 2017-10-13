@@ -5,8 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'trans_stats/css/trans_stats_us_map.css' %}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
 
 
 <body>
@@ -16,20 +15,156 @@
 	  <div id="something-unique" class="modal-dialog modal-lg">
 	    <div class="modal-content">
 	    	<div class="modal-header">
-        	<h5 class="modal-title">Respondent Populations based on State of Residence</h5>
-        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          		<span aria-hidden="true">&times;</span>
-        	</button>
+	        	<h5 class="modal-title">Respondent Populations based on State of Residence</h5>
+	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          		<span aria-hidden="true">&times;</span>
+	        	</button>
       		</div>
 			<div id="trans_pop_map">
-			<div id="tooltip"></div><!-- div to hold tooltip. -->
-			<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
-			<script src="{% static 'trans_stats/js/uStates.js' %}"></script> <!-- creates uStates. -->
-			<script src="http://d3js.org/d3.v3.min.js"></script>
-			<script src="{% static 'trans_stats/js/population_data.js' %}"></script>
+				<div id="tooltip"></div><!-- div to hold tooltip. -->
+				<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+				<script src="{% static 'trans_stats/js/uStates.js' %}"></script> <!-- creates uStates. -->
+				<script src="https://d3js.org/d3.v3.min.js"></script>
+				<script src="{% static 'trans_stats/js/population_data.js' %}"></script>
 			</div>
 	    </div>
 	  </div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>I. Gender Identity and Expression</h1>
+				<h2>a.) Identity</h2>
+				<p>The word transgender is often used as an “umbrella term” intended to encompass the spectrum of identities and capture the diversity of people whose gender differs from the one they were thought to be at birth. However, language describing identity continues to evolve, and it is difficult to describe all of those identities using just one term. Acknowledging this wide range of identities, the survey asked respondents if they thought of themselves as “transgender.” Eighty-eight percent (88%) of respondents reported that they thought of themselves as transgender, while the remaining 12% used other terms to describe their gender and related experiences.</p>
+			</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<h3>Figure 4.1</h3><br>
+				<p>Respondent’s level of comfort with the word “transgender” being used to describe them</p>
+				<canvas id="myChart" width="200" height="150"></canvas>
+				<script>
+				var ctx = document.getElementById("myChart");
+				var myChart = new Chart(ctx, {
+				    type: 'pie',
+				    data: {
+				        labels: ["Very Uncomfortable", "Somewhat Uncomfortable", "Neutral", "Somewhat Comfortable", "Very Comfortable"],
+				        datasets: [{
+				            label: '% of Respondents',
+				            data: [3, 11, 16, 27, 43],
+				            backgroundColor: [
+				                'rgba(255, 99, 132, 0.2)',
+				                'rgba(54, 162, 235, 0.2)',
+				                'rgba(255, 206, 86, 0.2)',
+				                'rgba(75, 192, 192, 0.2)',
+				                'rgba(153, 102, 255, 0.2)'
+				            ],
+				            borderColor: [
+				                'rgba(255,99,132,1)',
+				                'rgba(54, 162, 235, 1)',
+				                'rgba(255, 206, 86, 1)',
+				                'rgba(75, 192, 192, 1)',
+				                'rgba(153, 102, 255, 1)'
+				            ],
+				            borderWidth: 1
+				        }]
+				    },
+				});
+				</script>
+			</div>
+			<div class="col-sm-6">
+				<p>Respondents were also asked how comfortable they were with the word “transgender” being used to describe them on a five-point scale from “very comfortable” to “very uncomfortable.” Eighty-six percent (86%) expressed that they were comfortable or neutral using this term, including 82% percent of non-binary respondents. Forty-three percent (43%) were “very comfortable,” and only 14% expressed discomfort with being described as transgender2 (Figure 4.1). </p>
+				<p>Respondents were also offered a list of identity terms from which they could check all terms that described their gender identity, and they were also given an opportunity write in a gender that was not listed (Table 4.1). In addition to the listed terms, respondents wrote in more than 500 unique gender terms with which they identified. </p>
+				<table class="table table-bordered">
+					<h3>Table 4.1</h3>
+					<thead>
+						<tr style="background-color: navy; color: white; font-weight:bold;">
+							<th>Gender identity terms</th><th align="right">% of respondents</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Transgender</td><td align="right">65%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Trans</td><td align="right">56%</td>
+						</tr>
+						<tr>
+							<td>Trans Woman (MTF, male to female)</td><td align="right">32%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Trans man (FTM, female to male)</td><td align="right">31%</td>
+						</tr>
+						<tr>
+							<td>Non-binary</td><td align="right">31%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Genderqueer</td><td align="right">29%</td>
+						</tr>
+						<tr>
+							<td>Gender non-conforming or gender variant</td><td align="right">27%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Gender fluid/fluid</td><td align="right">20%</td>
+						</tr>
+						<tr>
+							<td>Androcynous</td><td align="right">18%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Transsexual</td><td align="right">18%</td>
+						</tr>
+						<tr>
+							<td>Agender</td><td align="right">14%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Two-spirit</td><td align="right">7%</td>
+						</tr>
+						<tr>
+							<td>Bi-gender</td><td align="right">6%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Butch</td><td align="right">5%</td>
+						</tr>
+						<tr>
+							<td>Crossdresser</td><td align="right">5%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Multi-gender</td><td align="right">4%</td>
+						</tr>
+						<tr>
+							<td>Third gender</td><td align="right">4%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Intersex</td><td align="right">3%</td>
+						</tr>
+						<tr>
+							<td>Drag performer (king/queen)</td><td align="right">2%</td>
+						</tr>
+						<tr class="table-info">
+							<td>A.G. or aggressive</td><td align="right">1%</td>
+						</tr>
+						<tr>
+							<td>Stud</td><td align="right">1%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Travesti</td><td align="right">1%</td>
+						</tr>
+						<tr>
+							<td>Bulldagger</td><td align="right"><1%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Fa'afafine</td><td align="right"><1%</td>
+						</tr>
+						<tr>
+							<td>Mahu</td><td align="right"><1%</td>
+						</tr>
+						<tr class="table-info">
+							<td>A gender not listed above</td><td align="right">12%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
