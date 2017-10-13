@@ -1,13 +1,16 @@
 body{
 	background-color: #FDFDFD;
 }
-h1 {
+h1{
 	text-align: center;
 }
 h2 {
-	margin-top: 20px;
+	text-align: center;
 }
 h3 {
+	margin-top: 20px;
+}
+h4 {
 	margin-top:20px;
 	text-align:center;
 }
@@ -15,14 +18,11 @@ p {
 	margin-top: 20px;
 }
 .row {
-	margin-top: 50px;
-}
-.col-sm-12 {
 	background-color: #f8f8f8;
-	padding: 20px;
-	padding-left:40px;
-	padding-right:40px;
 	border-radius: 5px;
+}
+.top-part{
+	margin-bottom:40px;
 }
 .col-sm-6 {
 	background-color: #f8f8f8;
@@ -34,3 +34,9 @@ p {
 canvas {
 	margin-bottom: 25px;
 }
+.header-thingy{
+	margin: auto;
+}
+/*.categories{
+	margin: auto;
+}*/

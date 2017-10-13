@@ -41,21 +41,63 @@
 	  </div>
 	</div>
 	<!-- end modal holder -->
-	<div class="container">
+	<div class="container top-part">
 		<div class="row">
-			<div class="col-sm-12">
-				<h1>I. Gender Identity and Expression</h1>
-				<h2>a.) Identity</h2>
-				<p>The word transgender is often used as an “umbrella term” intended to encompass the spectrum of identities and capture the diversity of people whose gender differs from the one they were thought to be at birth. However, language describing identity continues to evolve, and it is difficult to describe all of those identities using just one term. Acknowledging this wide range of identities, the survey asked respondents if they thought of themselves as “transgender.” Eighty-eight percent (88%) of respondents reported that they thought of themselves as transgender, while the remaining 12% used other terms to describe their gender and related experiences.</p>
+			<div class="col-sm-10 header-thingy">
+				<h1 style="margin-top: 25px; margin-bottom:10px;">Portrait of USTS Respondents</h1>
+				<p>With 27,715 respondents, the U.S. Transgender Survey (USTS) is the largest survey ever conducted
+				of transgender people in the United States, providing a rich understanding of numerous aspects
+				of their lives and experiences. In this chapter, an overview of respondents’ diverse gender
+				identities and experiences with transitioning is presented. Additional characteristics of USTS respondents,
+				such as race and ethnicity, age, educational attainment, and geographic location, are also presented. This
+				information is discussed in the following sections:</p>
 			</div>
+		</div>
+		<div class="row categories">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-3 col-sm-offset-3">
+				<ol type="I">
+					<li>Gender Identity and Expression</li>
+					<li>Experiences with Transitioning</li>
+					<li>Being Percieved as Transgender by Others</li>
+					<li>Outness</li>
+					<li>Race and Ethnicity</li>
+				</ol>
+			</div>
+			<div class="col-sm-3">
+				<ol type="I" start="6">
+					<li>Age</li>
+					<li>Location</li>
+					<li>Primary Language Spoken in Home</li>
+					<li>Religious or Spiritual Identity</li>
+					<li>Income and Employment Status</li>
+				</ol>
+			</div>
+			<div class="col-sm-3">
+				<ol type="I" start="11">
+					<li>Educational Attainment</li>
+					<li>Disability</li>
+					<li>Citizenship and Immigration Status</li>
+					<li>Sexual Orientation</li>
+					<li>Relationship Status</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="container content">
 		<div class="row">
 			<div class="col-sm-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+				<h2>I. Gender Identity and Expression</h2>
+				<h3>a.) Identity</h3>
+				<p>The word transgender is often used as an “umbrella term” intended to encompass the spectrum of identities and capture the diversity of people whose gender differs from the one they were thought to be at birth. However, language describing identity continues to evolve, and it is difficult to describe all of those identities using just one term. Acknowledging this wide range of identities, the survey asked respondents if they thought of themselves as “transgender.” Eighty-eight percent (88%) of respondents reported that they thought of themselves as transgender, while the remaining 12% used other terms to describe their gender and related experiences.</p>
 				<p>Respondents were also asked how comfortable they were with the word “transgender” being used to describe them on a five-point scale from “very comfortable” to “very uncomfortable.” Eighty-six percent (86%) expressed that they were comfortable or neutral using this term, including 82% percent of non-binary respondents. Forty-three percent (43%) were “very comfortable,” and only 14% expressed discomfort with being described as transgender2 (Figure 4.1). </p>
-				<h3>Figure 4.1</h3>
+				<h4>Figure 4.1</h4>
 				<p>Respondent’s level of comfort with the word “transgender” being used to describe them</p>
 				<canvas id="figure4.1" width="200" height="150"></canvas>
 				<script src="{% static 'trans_stats/js/figure41.js' %}""></script>
-				<h2>b.) Gender Identity Categories Used for Analysis</h2>
+				<p>Respondents were also offered a list of identity terms from which they could check all terms that described their gender identity, and they were also given an opportunity write in a gender that was not listed (Table 4.1). In addition to the listed terms, respondents wrote in more than 500 unique gender terms with which they identified. </p>
+				{% include "trans_stats/gender_identity_terms_table.html" %}
+				<h4>b.) Gender Identity Categories Used for Analysis</h4>
 				<p>Respondents were also asked to choose only one
 					term that best described their current gender identity
 					out of six possible terms (woman, man, trans woman
@@ -80,7 +122,10 @@
 					respondents were included in the transgender men
 					and women categories. Three percent (3%) said that
 					crossdresser best described their gender identity.
-					More than one-third (35%) of respondents indicated
+					</p>
+			</div>
+			<div class="col-sm-6">
+				<p>More than one-third (35%) of respondents indicated
 					that their gender identity was best described as nonbinary
 					or genderqueer, a term often used to describe
 					people whose gender is not exclusively male or
@@ -88,12 +133,12 @@
 					other than male or female, as more than one gender,
 					or as no gender (Figure 4.2). Throughout the report,
 					these respondents are referred to as “non-binary.”</p>
-				<h3>Figure 4.2</h3>
+				<h4>Figure 4.2</h4>
 				<p>Gender Identity</p>
 				<canvas id="figure4.2" width="200" height="150"></canvas>
 				<script src="{% static 'trans_stats/js/figure42.js' %}""></script>
 				<!-- put d here -->
-				<h3>c.) Gender Assignment at Birth</h3>
+				<h4>c.) Gender Assignment at Birth</h4>
 				<p>Respondents were asked about the sex they
 				were “assigned at birth, on [their] original birth
 				certificate.” In this report, the term “respondents
@@ -109,7 +154,7 @@
 				who were non-binary, 80% had female on their
 				original birth certificate, and 20% had male on
 				their original birth certificate. </p>
-				<h3>d.) Development of Transgender Identity and Interactions with Other Transgender People</h3>
+				<h4>d.) Development of Transgender Identity and Interactions with Other Transgender People</h4>
 				<p>Respondents received questions related to
 					the development of their transgender identity
 					throughout their lives. A majority of respondents
@@ -121,17 +166,10 @@
 					10. Six percent (6%) reported that they began to
 					feel different at age 21 or older (Figure 4.3).
 				</p>
-				<h3>Figure 4.3</h3>
+				<h4>Figure 4.3</h4>
 				<p> Age they began to feel gender was different from the one on their original birth certificate</p>
 				<canvas id="figure4.3" width="200" height="150"></canvas>
 				<script src="{% static 'trans_stats/js/figure43.js' %}""></script>
-				
-
-			</div>
-			<div class="col-sm-6">
-				<p>Respondents were also offered a list of identity terms from which they could check all terms that described their gender identity, and they were also given an opportunity write in a gender that was not listed (Table 4.1). In addition to the listed terms, respondents wrote in more than 500 unique gender terms with which they identified. </p>
-				<!-- table here -->
-				{% include "trans_stats/gender_identity_terms_table.html" %}
 				<p>Respondents were also asked how old they
 				were when they started to think of themselves as
 				transgender, even if they did not know that word.
@@ -142,12 +180,12 @@
 				28% between the ages of 11 and 15. Eight percent
 				(8%) reported beginning to think of themselves as
 				transgender at age 26 or older (Figure 4.4).</p>
-				<h3>Figure 4.4</h3>
+				<h4>Figure 4.4</h4>
 				<p> Age they started to think they
 				were transgender</p>
 				<canvas id="figure4.4" width="200" height="150"></canvas>
 				<script src="{% static 'trans_stats/js/figure44.js' %}""></script>
-				<h3>e.) Gender Identity and Current Age</h3>
+				<h4>e.) Gender Identity and Current Age</h4>
 				<p>The age profile of respondents7
 				 differed widely by
 				gender identity categories, with nearly half (47%) of
