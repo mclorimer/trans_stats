@@ -26,7 +26,7 @@ var barChartData = {
         {
             label: '65 and over',
             backgroundColor: "rgb(255,69,0)",
-            borderColor: "rgb(0,100,0)",
+            borderColor: "rgb(255,69,0)",
             borderWidth: 1,
             data: [20, 1, 1, 5]
         }
