@@ -56,8 +56,7 @@ var ctx = document.getElementById("figure4.6");
                         for (var i in allData) {
                             total += allData[i];
                         }
-                        var tooltipPercentage = Math.round((tooltipData / total) * 100);
-                        return tooltipLabel + ': ' + ' (' + tooltipPercentage + '%)';
+                        return tooltipLabel + ': ' + ' (' + tooltipData + '%)';
                     }
                 }
             }
