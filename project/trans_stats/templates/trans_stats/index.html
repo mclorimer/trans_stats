@@ -7,6 +7,8 @@
 <link rel="stylesheet" type="text/css" href="{% static 'trans_stats/css/trans_stats_us_map.css' %}">
 <!-- css styling for table 4.1 -->
 <link rel="stylesheet" type="text/css" href="{% static 'trans_stats/css/table_styling.css' %}">
+<!-- css styling for page -->
+<link rel="stylesheet" type="text/css" href="{% static 'trans_stats/css/page_styling.css' %}">
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- bootstrap -->
@@ -15,39 +17,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
 <!-- chart js library that allows for labels inside pie slices -->
 <script src="{% static 'trans_stats/js/ChartPieceLabel.js' %}"></script>
-<style>
-body{
-	background-color: #FDFDFD;
-}
-h2 {
-	margin-top: 20px;
-}
-h3 {
-	margin-top:20px;
-	text-align:center;
-}
-p {
-	margin-top: 20px;
-}
-.row {
-	margin-top: 50px;
-}
-.col-sm-12 {
-	background-color: #f8f8f8;
-	padding: 20px;
-	padding-left:40px;
-	padding-right:40px;
-	border-radius: 5px;
-}
-.col-sm-6 {
-	background-color: #f8f8f8;
-	padding: 20px;
-	padding-left:40px;
-	padding-right:40px;
-	border-radius: 5px;
-}
-}
-</style>
 
 <body>
 	<!-- where we're holding the modal for now -->
@@ -72,9 +41,6 @@ p {
 	  </div>
 	</div>
 	<!-- end modal holder -->
-
-
-
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
@@ -85,7 +51,7 @@ p {
 		<div class="row">
 			<div class="col-sm-6" style="padding-right:20px; border-right: 1px solid #ccc;">
 				<p>Respondents were also asked how comfortable they were with the word “transgender” being used to describe them on a five-point scale from “very comfortable” to “very uncomfortable.” Eighty-six percent (86%) expressed that they were comfortable or neutral using this term, including 82% percent of non-binary respondents. Forty-three percent (43%) were “very comfortable,” and only 14% expressed discomfort with being described as transgender2 (Figure 4.1). </p>
-				<h3>Figure 4.1</h3><br>
+				<h3>Figure 4.1</h3>
 				<p>Respondent’s level of comfort with the word “transgender” being used to describe them</p>
 				<canvas id="figure4.1" width="200" height="150"></canvas>
 				<script src="{% static 'trans_stats/js/figure41.js' %}""></script>
@@ -122,101 +88,16 @@ p {
 					other than male or female, as more than one gender,
 					or as no gender (Figure 4.2). Throughout the report,
 					these respondents are referred to as “non-binary.”</p>
-				<h3>Figure 4.2</h3><br>
+				<h3>Figure 4.2</h3>
 				<p>Gender Identity</p>
 				<canvas id="figure4.2" width="200" height="150"></canvas>
 				<script src="{% static 'trans_stats/js/figure42.js' %}""></script>
 			</div>
 			<div class="col-sm-6">
 				<p>Respondents were also offered a list of identity terms from which they could check all terms that described their gender identity, and they were also given an opportunity write in a gender that was not listed (Table 4.1). In addition to the listed terms, respondents wrote in more than 500 unique gender terms with which they identified. </p>
-				<table class="table table-bordered">
-					<h3>Table 4.1</h3>
-					<thead>
-						<tr style="background-color: navy; color: white; font-weight:bold;">
-							<th>Gender identity terms</th><th align="right">% of respondents</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Transgender</td><td align="right">65%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Trans</td><td align="right">56%</td>
-						</tr>
-						<tr>
-							<td>Trans Woman (MTF, male to female)</td><td align="right">32%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Trans man (FTM, female to male)</td><td align="right">31%</td>
-						</tr>
-						<tr>
-							<td>Non-binary</td><td align="right">31%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Genderqueer</td><td align="right">29%</td>
-						</tr>
-						<tr>
-							<td>Gender non-conforming or gender variant</td><td align="right">27%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Gender fluid/fluid</td><td align="right">20%</td>
-						</tr>
-						<tr>
-							<td>Androcynous</td><td align="right">18%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Transsexual</td><td align="right">18%</td>
-						</tr>
-						<tr>
-							<td>Agender</td><td align="right">14%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Two-spirit</td><td align="right">7%</td>
-						</tr>
-						<tr>
-							<td>Bi-gender</td><td align="right">6%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Butch</td><td align="right">5%</td>
-						</tr>
-						<tr>
-							<td>Crossdresser</td><td align="right">5%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Multi-gender</td><td align="right">4%</td>
-						</tr>
-						<tr>
-							<td>Third gender</td><td align="right">4%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Intersex</td><td align="right">3%</td>
-						</tr>
-						<tr>
-							<td>Drag performer (king/queen)</td><td align="right">2%</td>
-						</tr>
-						<tr class="table-info">
-							<td>A.G. or aggressive</td><td align="right">1%</td>
-						</tr>
-						<tr>
-							<td>Stud</td><td align="right">1%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Travesti</td><td align="right">1%</td>
-						</tr>
-						<tr>
-							<td>Bulldagger</td><td align="right"><1%</td>
-						</tr>
-						<tr class="table-info">
-							<td>Fa'afafine</td><td align="right"><1%</td>
-						</tr>
-						<tr>
-							<td>Mahu</td><td align="right"><1%</td>
-						</tr>
-						<tr class="table-info">
-							<td>A gender not listed above</td><td align="right">12%</td>
-						</tr>
-					</tbody>
-				</table>
+				<!-- table here -->
+				{% include "trans_stats/gender_identity_terms_table.html" %}
+
 				<h3>c. Gender Assignment at Birth</h3>
 				<p>Respondents were asked about the sex they
 				were “assigned at birth, on [their] original birth
@@ -253,9 +134,6 @@ p {
 				<p> Age they began to feel gender was different from the one on their original birth certificate</p>
 				<canvas id="figure4.3" width="200" height="150"></canvas>
 				<script src="{% static 'trans_stats/js/figure43.js' %}""></script>
-				
-			</div>
-			<div class="col-sm-6">
 				<p>Respondents were also asked how old they
 				were when they started to think of themselves as
 				transgender, even if they did not know that word.
@@ -266,11 +144,30 @@ p {
 				28% between the ages of 11 and 15. Eight percent
 				(8%) reported beginning to think of themselves as
 				transgender at age 26 or older (Figure 4.4).</p>
+				
+			</div>
+			<div class="col-sm-6">
 				<h3>Figure 4.4</h3>
 				<p> Age they started to think they
 				were transgender</p>
 				<canvas id="figure4.4" width="200" height="150"></canvas>
 				<script src="{% static 'trans_stats/js/figure44.js' %}""></script>
+				<h3>e.) Gender Identity and Current Age</h3>
+				<p>The age profile of respondents7
+				 differed widely by
+				gender identity categories, with nearly half (47%) of
+				transgender men and women being aged 25–44,
+				compared to 35% of non-binary respondents, and
+				29% of crossdressers. Non-binary respondents were
+				more likely to be younger, with nearly two-thirds (61%)
+				being aged 18–24, in contrast to transgender men
+				(43%), transgender women (24%), and crossdressers
+				(8%). One in five (20%) crossdressers were aged
+				65 or older, compared to only 5% of transgender
+				women, 1% of non-binary respondents, and less than
+				1% of transgender men (Figure 4.6).</p>
+				<canvas id="figure4.6" width="200" height="150"></canvas>
+				<script src="{% static 'trans_stats/js/figure46.js' %}""></script>
 			</div>
 		</div>
 	</div>
