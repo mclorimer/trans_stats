@@ -7,6 +7,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
 <script src="{% static 'trans_stats/js/ChartPieceLabel.js' %}"></script>
+<style>
+	tr {
+   line-height: 25px;
+   min-height: 25px;
+   height: 25px;
+}
+</style>
 
 <body>
 	<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
@@ -40,11 +47,12 @@
 			</div>
 		<div class="row">
 			<div class="col-sm-6">
+				<p>Respondents were also asked how comfortable they were with the word “transgender” being used to describe them on a five-point scale from “very comfortable” to “very uncomfortable.” Eighty-six percent (86%) expressed that they were comfortable or neutral using this term, including 82% percent of non-binary respondents. Forty-three percent (43%) were “very comfortable,” and only 14% expressed discomfort with being described as transgender2 (Figure 4.1). </p>
 				<h3>Figure 4.1</h3><br>
 				<p>Respondent’s level of comfort with the word “transgender” being used to describe them</p>
-				<canvas id="myChart" width="200" height="150"></canvas>
+				<canvas id="figure4.1" width="200" height="150"></canvas>
 				<script>
-				var ctx = document.getElementById("myChart");
+				var ctx = document.getElementById("figure4.1");
 				var myChart = new Chart(ctx, {
 				    type: 'pie',
 				    data: {
@@ -69,12 +77,108 @@
 				            borderWidth: 1
 				        }]
 				    },
-				    options: {pieceLabel: {render: "label"}}
+				    options: {
+				    	pieceLabel: {render: "label"},
+				    	tooltips: {
+				            callbacks: {
+				                label: function(tooltipItem, data) {
+				                    var allData = data.datasets[tooltipItem.datasetIndex].data;
+				                    var tooltipLabel = data.labels[tooltipItem.index];
+				                    var tooltipData = allData[tooltipItem.index];
+				                    var total = 0;
+				                    for (var i in allData) {
+				                        total += allData[i];
+				                    }
+				                    var tooltipPercentage = Math.round((tooltipData / total) * 100);
+				                    return tooltipLabel + ': ' + ' (' + tooltipPercentage + '%)';
+				                }
+				            }
+			        	}
+				    }
+				});
+				</script>
+				<h2>b.) Gender Identity Categories Used for Analysis</h2>
+				<p>Respondents were also asked to choose only one
+					term that best described their current gender identity
+					out of six possible terms (woman, man, trans woman
+					(MTF), trans man (FTM), non-binary/genderqueer,
+					or crossdresser) to determine the gender identity
+					categories used for primary analysis.
+				</p>
+				<p>
+					Respondents were grouped into four gender identity categories
+					based on their responses. These four categories
+					are used throughout this report to discuss the
+					experiences of those who completed the survey:
+					transgender women, transgender men, non-binary
+					people, and crossdressers.
+					4 Those who said that
+					woman or transgender woman best described their
+					gender identity were included in the transgender
+					women analytical category (33%), and those who said
+					that man or transgender man best described their
+					gender identity were included in the transgender
+					men analytical category (29%). Overall, 62% of
+					respondents were included in the transgender men
+					and women categories. Three percent (3%) said that
+					crossdresser best described their gender identity.
+					More than one-third (35%) of respondents indicated
+					that their gender identity was best described as nonbinary
+					or genderqueer, a term often used to describe
+					people whose gender is not exclusively male or
+					female, including those who identify with a gender
+					other than male or female, as more than one gender,
+					or as no gender (Figure 4.2). Throughout the report,
+					these respondents are referred to as “non-binary.”</p>
+				<h3>Figure 4.2</h3><br>
+				<p>Gender Identity</p>
+				<canvas id="figure4.2" width="200" height="150"></canvas>
+				<script>
+				var ctx = document.getElementById("figure4.2");
+				var myChart = new Chart(ctx, {
+				    type: 'pie',
+				    data: {
+				        labels: ["Transgender Men", "Transgender Women", "Non-Binary People", "Crossdressers"],
+				        datasets: [{
+				            label: '% of Respondents',
+				            data: [29, 33, 35, 3],
+				            backgroundColor: [
+				                'rgba(255, 99, 132, 0.2)',
+				                'rgba(54, 162, 235, 0.2)',
+				                'rgba(255, 206, 86, 0.2)',
+				                'rgba(75, 192, 192, 0.2)'
+				            ],
+				            borderColor: [
+				                'rgba(255,99,132,1)',
+				                'rgba(54, 162, 235, 1)',
+				                'rgba(255, 206, 86, 1)',
+				                'rgba(75, 192, 192, 1)'
+				            ],
+				            borderWidth: 1
+				        }]
+				    },
+				    options: {
+				    	pieceLabel: {render: "label"},
+				    	tooltips: {
+				            callbacks: {
+				                label: function(tooltipItem, data) {
+				                    var allData = data.datasets[tooltipItem.datasetIndex].data;
+				                    var tooltipLabel = data.labels[tooltipItem.index];
+				                    var tooltipData = allData[tooltipItem.index];
+				                    var total = 0;
+				                    for (var i in allData) {
+				                        total += allData[i];
+				                    }
+				                    var tooltipPercentage = Math.round((tooltipData / total) * 100);
+				                    return tooltipLabel + ': ' + ' (' + tooltipPercentage + '%)';
+				                }
+				            }
+			        	}
+				    }
 				});
 				</script>
 			</div>
 			<div class="col-sm-6">
-				<p>Respondents were also asked how comfortable they were with the word “transgender” being used to describe them on a five-point scale from “very comfortable” to “very uncomfortable.” Eighty-six percent (86%) expressed that they were comfortable or neutral using this term, including 82% percent of non-binary respondents. Forty-three percent (43%) were “very comfortable,” and only 14% expressed discomfort with being described as transgender2 (Figure 4.1). </p>
 				<p>Respondents were also offered a list of identity terms from which they could check all terms that described their gender identity, and they were also given an opportunity write in a gender that was not listed (Table 4.1). In addition to the listed terms, respondents wrote in more than 500 unique gender terms with which they identified. </p>
 				<table class="table table-bordered">
 					<h3>Table 4.1</h3>
