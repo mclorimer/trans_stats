@@ -286,6 +286,139 @@
 				their original birth certificate. </p>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<h3>d.) Development of Transgender Identity and Interactions with Other Transgender People</h3>
+				<p>Respondents received questions related to
+					the development of their transgender identity
+					throughout their lives. A majority of respondents
+					(60%) reported that they began to feel “different”
+					from the sex on their original birth certificate at
+					age 10 or younger, including 32% who began to
+					feel different at age 5 or younger, and 28% who
+					began to feel different between the ages of 6 and
+					10. Six percent (6%) reported that they began to
+					feel different at age 21 or older (Figure 4.3).
+				</p>
+				<h3>Figure 4.3</h3><br>
+				<p> Age they began to feel gender was different from the one on their original birth certificate</p>
+				<canvas id="figure4.3" width="200" height="150"></canvas>
+				<script>
+				var ctx = document.getElementById("figure4.3");
+				var myChart = new Chart(ctx, {
+				    type: 'pie',
+				    data: {
+				        labels: ["5 and Under", "6 to 10", "11 to 15", "16 to 20", "21 to 25", "26 and over"],
+				        datasets: [{
+				            label: '% of Respondents',
+				            data: [32, 28, 21, 13, 4, 2],
+				            backgroundColor: [
+								'rgba(255, 99, 132, 0.2)',
+				                'rgba(54, 162, 235, 0.2)',
+				                'rgba(255, 206, 86, 0.2)',
+				                'rgba(75, 192, 192, 0.2)',
+				                'rgba(153, 102, 255, 0.2)',
+				                'rgba(255, 159, 64, 0.2)'
+				            ],
+				            borderColor: [
+								'rgba(255,99,132,1)',
+				                'rgba(54, 162, 235, 1)',
+				                'rgba(255, 206, 86, 1)',
+				                'rgba(75, 192, 192, 1)',
+				                'rgba(153, 102, 255, 1)',
+				                'rgba(255, 159, 64, 1)'
+				            ],
+				            borderWidth: 1
+				        }]
+				    },
+				    options: {
+				    	pieceLabel: {render: "label"},
+				    	tooltips: {
+				            callbacks: {
+				                label: function(tooltipItem, data) {
+				                    var allData = data.datasets[tooltipItem.datasetIndex].data;
+				                    var tooltipLabel = data.labels[tooltipItem.index];
+				                    var tooltipData = allData[tooltipItem.index];
+				                    var total = 0;
+				                    for (var i in allData) {
+				                        total += allData[i];
+				                    }
+				                    var tooltipPercentage = Math.round((tooltipData / total) * 100);
+				                    return tooltipLabel + ': ' + ' (' + tooltipPercentage + '%)';
+				                }
+				            }
+			        	}
+				    }
+				});
+				</script>
+				
+			</div>
+			<div class="col-sm-6">
+				<p>Respondents were also asked how old they
+				were when they started to think of themselves as
+				transgender, even if they did not know that word.
+				One in ten (10%) reported that they began thinking
+				of themselves as transgender at age 5 or younger.
+				Sixteen percent (16%) began to think of themselves
+				as transgender between the ages of 6 and 10, and
+				28% between the ages of 11 and 15. Eight percent
+				(8%) reported beginning to think of themselves as
+				transgender at age 26 or older (Figure 4.4).</p>
+				<h3>Figure 4.4</h3>
+				<p> Age they started to think they
+				were transgender</p>
+				<canvas id="figure4.4" width="200" height="150"></canvas>
+				<script>
+				var ctx = document.getElementById("figure4.4");
+				var myChart = new Chart(ctx, {
+				    type: 'pie',
+				    data: {
+				        labels: ["5 and Under", "6 to 10", "11 to 15", "16 to 20", "21 to 25", "26 and over"],
+				        datasets: [{
+				            label: '% of Respondents',
+				            data: [10, 16, 28, 29, 10, 8],
+				            backgroundColor: [
+								'rgba(255, 99, 132, 0.2)',
+				                'rgba(54, 162, 235, 0.2)',
+				                'rgba(255, 206, 86, 0.2)',
+				                'rgba(75, 192, 192, 0.2)',
+				                'rgba(153, 102, 255, 0.2)',
+				                'rgba(255, 159, 64, 0.2)'
+				            ],
+				            borderColor: [
+								'rgba(255,99,132,1)',
+				                'rgba(54, 162, 235, 1)',
+				                'rgba(255, 206, 86, 1)',
+				                'rgba(75, 192, 192, 1)',
+				                'rgba(153, 102, 255, 1)',
+				                'rgba(255, 159, 64, 1)'
+				            ],
+				            borderWidth: 1
+				        }]
+				    },
+				    options: {
+				    	pieceLabel: {render: "label"},
+				    	tooltips: {
+				            callbacks: {
+				                label: function(tooltipItem, data) {
+				                    var allData = data.datasets[tooltipItem.datasetIndex].data;
+				                    var tooltipLabel = data.labels[tooltipItem.index];
+				                    var tooltipData = allData[tooltipItem.index];
+				                    var total = 0;
+				                    for (var i in allData) {
+				                        total += allData[i];
+				                    }
+				                    var tooltipPercentage = Math.round((tooltipData / total) * 100);
+				                    return tooltipLabel + ': ' + ' (' + tooltipPercentage + '%)';
+				                }
+				            }
+			        	}
+				    }
+				});
+				</script>
+				
+			</div>
+		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
