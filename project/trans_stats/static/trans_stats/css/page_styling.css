@@ -6,7 +6,7 @@ h1{
 }
 h2 {
 	text-align: center;
-	padding: 20px;
+	padding-top: 30px;
 }
 .headd{
 	margin-bottom: 40px;
@@ -45,6 +45,15 @@ canvas {
 .header-thingy{
 	margin: auto;
 }
-/*.categories{
-	margin: auto;
-}*/
+
+.text{
+	position: absolute;
+	left: 30%;
+	top: 60%;
+}
+.hide {
+	display: none;
+}
+img {
+	max-width: 100%;
+}

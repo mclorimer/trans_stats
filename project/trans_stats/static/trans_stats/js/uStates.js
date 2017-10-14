@@ -61,7 +61,7 @@
 			var style = getComputedStyle($("#something-unique")[0]);
 			d3.select("#tooltip").html(toolTip(d.n, data[d.id]))  
 				.style("left", (d3.event.pageX - parseFloat(style["margin-left"])) + "px")     
-				.style("top", (d3.event.pageY- parseFloat(style["margin-top"])) + "px");
+				.style("top", (d3.event.pageY- 11250- parseFloat(style["margin-top"])) + "px");
 				// console.log(d3);
 		}
 		
