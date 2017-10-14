@@ -20,26 +20,7 @@
 
 <body>
 	<!-- where we're holding the modal for now -->
-	<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-	<div id="themodal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-	  <div id="something-unique" class="modal-dialog modal-lg">
-	    <div class="modal-content">
-	    	<div class="modal-header">
-	        	<h5 class="modal-title">Respondent Populations based on State of Residence</h5>
-	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          		<span aria-hidden="true">&times;</span>
-	        	</button>
-      		</div>
-			<div id="trans_pop_map">
-				<div id="tooltip"></div><!-- div to hold tooltip. -->
-				<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
-				<script src="{% static 'trans_stats/js/uStates.js' %}"></script> <!-- creates uStates. -->
-				<script src="https://d3js.org/d3.v3.min.js"></script>
-				<script src="{% static 'trans_stats/js/population_data.js' %}"></script>
-			</div>
-	    </div>
-	  </div>
-	</div>
+	
 	<!-- end modal holder -->
 	<div class="container top-part">
 		<div class="row">
@@ -85,7 +66,7 @@
 		</div>
 	</div>
 	<div class="container section">
-		<div class="row">
+		<div class="row headd">
 			<div class="col-sm-12">
 				<h2>I. Gender Identity and Expression</h2>
 			</div>
@@ -220,7 +201,7 @@
 		</div>
 	</div>
 	<div class="container section">
-	<div class="row">
+	<div class="row headd">
 			<div class="col-sm-12">
 				<h2>II. Experiences with Transitioning</h2>
 			</div>
@@ -388,6 +369,246 @@
 			</div>
 		</div>
 	</div>
+	<div class="container section">
+		<div class="row headd">
+				<div class="col-sm-12">
+					<h2>III. Being Percieved as a Transgender Person by Others</h2>
+				</div>
+		</div>
+			<div class="row">
+				<div class="col-sm-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+					<p>Some transgender people find that others can
+					routinely tell that they are transgender without
+					being told, while others are generally perceived
+					as the gender they identify with, and still others
+					are perceived as the gender they were thought to
+					be at birth. Many interactions and experiences of
+					transgender people may be influenced by others’
+					perceptions of them as being a transgender
+					person. Transgender people who are visually or
+					otherwise perceived by others as transgender or
+					gender non-conforming may be more vulnerable
+					to negative interactions in public or other settings.</p>
+					<p>To assess whether respondents were perceived
+					as transgender, they were asked whether others
+					could tell that they were transgender even without
+					being told on a five-point scale from “always” to
+					“never.” Nearly one in ten (9%) reported that others
+					could tell they were transgender without being
+					told “most of the time,” 32% said others could
+					“sometimes” tell, and 24% said that others could
+					never tell (Figure 4.14).11 Respondents’ experiences
+					with others’ perception of their transgender status
+					varied by gender identity (Figure 4.15).</p>
+					<h4>Figure 4.14 How often people could tell they were transgender without being told</h4>
+					<canvas id="figure4.14" width="200" height="150"></canvas>
+					<script src="{% static 'trans_stats/js/figure414.js' %}""></script>
+				</div>
+				<div class="col-sm-6">
+					<canvas id="figure4.15" width="200" height="250"></canvas>
+					<script src="{% static 'trans_stats/js/figure415.js' %}""></script>
+				</div>
+			</div>
+	</div>
+	<div class="container section">
+		<div class="row headd">
+				<div class="col-sm-12">
+					<h2>IV. Outness</h2>
+				</div>
+		</div>
+			<div class="row">
+				<div class="col-sm-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+					<p>Respondents were asked whether they thought
+					different groups of people in their lives knew that
+					they were transgender to determine if they were
+					“out”12 about their transgender identity to family
+					members, friends, supervisors and colleagues
+					at work, classmates, and health care providers.
+					Respondents were asked whether all, most, some,
+					or none of the people in their lives knew they were
+					transgender in each of the groups of people in
+					their lives. Results reflect only those respondents
+					who had people from each group in their lives.
+					Overall, 8% reported that they were out to all
+					of the people in their lives, across all groups of
+					people, 48% were out to most, 43% were out to
+					some, and only 2% were out to none of the people
+					in their lives. </p>
+					<p>Nearly two-thirds (62%) were out to all or most
+					of the immediate family that they grew up with,
+					and 38% were out to all or most of their extended
+					family.13 Regarding workplace environments,
+					nearly one-half reported that none of their current
+					supervisors (49%) or coworkers (42%) knew that
+					they were transgender.14 In terms of health care
+					providers, although 40% reported that all of
+					their health care providers knew that they were
+					transgender, almost one-third (31%) indicated that
+					none of their health care providers knew that they
+					were transgender (Figure 4.16). </p>
+					<p>Of all groups of people the survey asked about,
+					respondents were most likely to be out to all of
+					their LGBT friends (62%). Respondents were also
+					asked about the methods by which they socialize
+					with other transgender people. Sixty-four percent
+					(64%) reported that they socialized with other
+					transgender people in person, and 79% socialized
+					online. Nearly one-third (32%) said they interacted
+					with transgender people in political activism, and
+					10% reported that they did not socialize with other
+					transgender people. </p>
+				</div>
+				<div class="col-sm-6">
+					<canvas id="figure4.16" width="200" height="300"></canvas>
+					<script src="{% static 'trans_stats/js/figure416.js' %}""></script>
+				</div>
+			</div>
+	</div>
+	<div class="container section">
+		<div class="row headd">
+				<div class="col-sm-12">
+					<h2>V. Race and Ethnicity</h2>
+				</div>
+		</div>
+			<div class="row">
+				<div class="col-sm-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+					<p>Respondents received a question on race and
+					ethnicity and were asked to select only one of
+					the following categories that most accurately
+					described their racial or ethnic identity:</p>
+					<ul>
+						<li>Alaska Native (received a write-in option)</li>
+						<li>American Indian (received a write-in option)</li>
+						<li>Asian or Asian American</li>
+						<li>Biracial or multiracial (received a write-in option</li>
+						<li>Black or African American</li>
+						<li>Latino/a or Hispanic</li>
+						<li>Middle Eastern or North African</li>
+						<li>Native Hawaiian or Pacific Islander</li>
+						<li>White or European American</li>
+						<li>A racial or ethnic identity not listed above (received a follow-up question)</li>
+					</ul>
+					<p>Throughout the report, respondents who identified
+					as biracial, multiracial, or more than one racial
+					or ethnic category are included in the multiracial
+					group. Additionally, due to small sample sizes and
+					for purposes of analysis, certain racial and ethnic
+					groups were combined into single categories.
+					American Indian and Alaska Native respondents
+					are combined in one category and reported
+					as “American Indian.” Similarly, the Asian/Asian
+					American and Native Hawaiian/Pacific Islander
+					groups are also combined in one category and
+					reported as “Asian.”19</p>
+				</div>
+				<div class="col-sm-6">
+					<p>The USTS sample had a percentage of white
+					respondents that is notably higher than the U.S.
+					general population, which is common among
+					internet-based surveys.20 Therefore, a race and
+					ethnicity weight was developed to more closely
+					represent what is estimated to be the actual
+					racial and ethnic distribution for the transgender
+					population in the U.S., based on the Census 
+					Bureau’s 2014 American Community Survey
+					(ACS).21 Racial and ethnic categories were
+					weighted to reflect the ACS distribution for race
+					and ethnicity as part of the standard survey weight
+					that was applied to all results presented in the
+					report (Figure 4.17).22 </p>
+					<h4>FIgure 4.17: Race and ethnicity of respondents</h4>
+					<canvas id="figure4.17" width="200" height="150"></canvas>
+					<script src="{% static 'trans_stats/js/figure417.js' %}""></script>
+				</div>
+			</div>
+	</div>
+	<div class="container section">
+		<div class="row headd">
+			<div class="col-sm-12">
+				<h2>VI. Age</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<p>The age of respondents in the sample ranged
+				from 18 to 87. The overall age of respondents
+				in the sample was generally younger than that
+				in the U.S population. In addition to having a
+				younger age distribution, a disproportionally
+				large number of respondents reported an age
+				of 18 years old. Therefore a weight was created
+				to balance the representation in the sample of
+				those 18-year-old respondents in relation to the
+				rest of the sample. This weight was part of the
+				standard survey weight that was applied to all
+				results presented in this report (Figure 4.18).
+				Additionally, for certain findings in this report, a
+				“supplemental weight” was applied to adjust the
+				USTS sample to reflect the age distribution for
+				the U.S. population based on the ACS.23</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+			<h4>Figure 4.18a: Age of respondents by % in USTS</h4>
+			<canvas id="figure4.18a" width="200" height="150"></canvas>
+			<script src="{% static 'trans_stats/js/figure418a.js' %}""></script>
+			</div>
+			<div class="col-sm-6">
+			<h4>Figure 4.18b: Age of respondents by % in US population</h4>
+			<canvas id="figure4.18b" width="200" height="150"></canvas>
+			<script src="{% static 'trans_stats/js/figure418b.js' %}""></script>
+			</div>
+		</div>
+	</div>
+	<div class="container section">
+		<div class="row headd">
+			<div class="col-sm-12">
+				<h2>VII. Location</h2>
+			</div>
+		</div>
+			<div class="row">
+				<div class="col-sm-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+				<p>The sample included respondents from all 50 states,
+				the District of Columbia, American Samoa, Guam,
+				Puerto Rico, and several U.S. military bases overseas.
+				The geographic distribution of the sample generally
+				mirrors that of the U.S. general population (Figure 4.19). The sample was divided into regions based on
+				the Census Bureau regions, which included the
+				Northeast, Midwest, South, and West (Figure 4.20).
+				These regional categories did not include U.S.
+				territories or U.S. military bases overseas.</p>
+				<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Click here to see figure 4.19</button>
+				<div id="themodal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  				<div id="something-unique" class="modal-dialog modal-lg">
+	    				<div class="modal-content">
+	    					<div class="modal-header">
+	        					<h5 class="modal-title">Respondent Populations based on State of Residence</h5>
+	        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          							<span aria-hidden="true">&times;</span>
+	        						</button>
+      						</div>
+							<div id="trans_pop_map">
+								<div id="tooltip"></div><!-- div to hold tooltip. -->
+								<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+								<script src="{% static 'trans_stats/js/uStates.js' %}"></script> <!-- creates uStates. -->
+								<script src="https://d3js.org/d3.v3.min.js"></script>
+								<script src="{% static 'trans_stats/js/population_data.js' %}"></script>
+							</div>
+	    				</div>
+	  				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
