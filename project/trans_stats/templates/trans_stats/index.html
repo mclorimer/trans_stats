@@ -81,7 +81,7 @@
 				<canvas id="figure4.1" width="200" height="150"></canvas>
 				<script src="{% static 'trans_stats/js/figure41.js' %}""></script>
 				<p>Respondents were also offered a list of identity terms from which they could check all terms that described their gender identity, and they were also given an opportunity write in a gender that was not listed (Table 4.1). In addition to the listed terms, respondents wrote in more than 500 unique gender terms with which they identified. </p>
-				{% include "trans_stats/gender_identity_terms_table.html" %}
+				{% include "trans_stats/table41.html" %}
 				<h4>b.) Gender Identity Categories Used for Analysis</h4>
 				<p>Respondents were also asked to choose only one
 					term that best described their current gender identity
@@ -636,6 +636,157 @@
 
 
 
+
+
+	<div class="container section">
+		<div class="row headd">
+			<div class="col-sm-12">
+				<h2>VIII. Primary Language spoken in Home</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<p>Respondents were asked about the primary
+				language spoken in their home. Eighty-four
+				percent (84%) reported that English was the only
+				language spoken in their home, compared to 79%
+				in the U.S. general population, as reported in the
+				American Community Survey (ACS).25 Fourteen
+				percent (14%) reported that English and another
+				language were mainly spoken in their home,
+				and 2% reported that a language other than
+				English was the primary language spoken in their
+				home. In addition to spoken languages, 0.4% of
+				respondents also reported that American Sign
+				Language was either the main language or one of
+				the main languages used in their home. </p>
+				<p>Spanish (including Spanish Creole) was reported
+				as the most common language spoken in their
+				home other than English, with 10% of respondents
+				reporting Spanish was the main language spoken
+				in their home, exclusively or along with English.
+				This was slightly lower than the percentage of
+				those who spoke Spanish in the home in the
+				U.S. general population (13%).26 Each of the other
+				identified languages were spoken by less than 1%
+				of respondents.</p>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="container section">
+		<div class="row headd">
+			<div class="col-sm-12">
+				<h2>IX. Religious or Spiritual Identity</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+				<p>Respondents were asked about their current
+				religious or spiritual identity and could select
+				one or more identities from a provided list, or
+				they could select a religious affiliation or spiritual
+				identity not listed.27,28 Sixty-three percent (63%) of
+				respondents reported that they had a spiritual or
+				religious identity, and 37% of respondents reported
+				that they did not have a spiritual or religious
+				identity.29 Respondents were most likely to identify
+				as agnostic (23%), atheist (22%), or Christian (21%),
+				followed by a smaller percentage who identified as
+				Pagan (9%), Buddhist (6%), or Jewish (4%). Onequarter
+				(25%) of respondents identified as spiritual,
+				but with no religious affiliation. Thirteen percent
+				(13%) had no religious or spiritual affiliation, and 7%
+				identified a religious affiliation or spiritual identity
+				that was not listed (Table 4.3).</p>
+			</div>
+			<div class="col-sm-6">
+				{% include "trans_stats/table43.html" %}
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="container section">
+		<div class="row headd">
+			<div class="col-sm-12">
+				<h2>X income and Employment Status</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+				<p>Respondents were asked about various aspects
+				of their income using a series of questions based
+				on the Current Population Survey (CPS).30 Results
+				for income and employment status are presented 
+				briefly in this section and discussed in greater
+				detail in the Income and Employment Status
+				chapter. In order to compare USTS respondents’
+				income and employment data with data from the
+				CPS and other national data sources, income
+				and employment results are presented with the
+				“supplement weight” applied.31</p>
+				<h3>a.) Sources of Income</h3>
+				<p>Nearly half (45%) of respondents received income
+				from multiple sources, such as employment, Social
+				Security income, or a pension. Thirty-six percent
+				(36%) received income solely from their own
+				employment or a partner or spouse’s employment
+				(not including underground economy work, such
+				as sex work, drug sales, or other work that is
+				currently criminalized). Nearly one in ten (9%)
+				received income from Social Security, including
+				disability, and 3% received income solely from
+				a pension. Three percent (3%) reported that
+				they were currently working in the underground
+				economy, including 1% whose income came solely
+				from underground economy work (Table 4.4).</p>
+				<table class="table table-bordered">
+					<h4>Table 4.4: Current sources of income by single and multiple sources</h4>
+					<thead>
+						<tr style="background-color: navy; color: white; font-weight:bold;">
+							<th>Sources of income</th><th align="right">% of respondents (supplemental weight)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Employment only (from their own employer, partner/spouse's employer, or self-employment)</td><td align="right">36%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Social Security income/disability only</td><td align="right">9%</td>
+						</tr>
+						<tr>
+							<td>Pension/retirement only</td><td align="right">3%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Other sources of income only</td><td align="right">3%</td>
+						</tr>
+						<tr>
+							<td>No income</td><td align="right">2%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Sex work and other underground economy work only</td><td align="right">1%</td>
+						</tr>
+						<tr>
+							<td>Unemployed benefits/cash assistance only</td><td align="right">1%</td>
+						</tr>
+						<tr class="table-info">
+							<td>Multiple sources</td><td align="right">45%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 
 
 
