@@ -48,8 +48,8 @@ canvas {
 
 .text{
 	position: absolute;
-	left: 30%;
-	top: 60%;
+	left: 15%;
+	top: 40%;
 }
 .hide {
 	display: none;

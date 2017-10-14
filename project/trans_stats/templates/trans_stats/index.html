@@ -601,29 +601,35 @@
 				Northeast, Midwest, South, and West (Figure 4.20).
 				These regional categories did not include U.S.
 				territories or U.S. military bases overseas.</p>
-				<div class="wrapper">
-					<span class="text hide">Click here to view Figure 4.20</span>
-					<img src="{% static 'trans_stats/images/trans_map.jpg' %}" id="trans-pop-map" class="img-responsive" data-toggle="modal" data-target=".bd-example-modal-lg">
+					<div class="wrapper">
+						<span class="text hide">Click here to view an interactive map of figure 4.19</span>
+						<img src="{% static 'trans_stats/images/trans_map.jpg' %}" id="trans-pop-map" class="img-responsive" data-toggle="modal" data-target=".bd-example-modal-lg">
+					</div>
+					<div id="themodal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		  				<div id="something-unique" class="modal-dialog modal-lg">
+		    				<div class="modal-content">
+		    					<div class="modal-header">
+		        					<h5 class="modal-title">Respondent Populations based on State of Residence</h5>
+		        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          							<span aria-hidden="true">&times;</span>
+		        						</button>
+	      						</div>
+								<div id="trans_pop_map">
+									<div id="tooltip"></div><!-- div to hold tooltip. -->
+									<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+									<script src="{% static 'trans_stats/js/uStates.js' %}"></script> <!-- creates uStates. -->
+									<script src="https://d3js.org/d3.v3.min.js"></script>
+									<script src="{% static 'trans_stats/js/population_data.js' %}"></script>
+								</div>
+		    				</div>
+		  				</div>
+					</div>
 				</div>
-				<div id="themodal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-	  				<div id="something-unique" class="modal-dialog modal-lg">
-	    				<div class="modal-content">
-	    					<div class="modal-header">
-	        					<h5 class="modal-title">Respondent Populations based on State of Residence</h5>
-	        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          							<span aria-hidden="true">&times;</span>
-	        						</button>
-      						</div>
-							<div id="trans_pop_map">
-								<div id="tooltip"></div><!-- div to hold tooltip. -->
-								<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
-								<script src="{% static 'trans_stats/js/uStates.js' %}"></script> <!-- creates uStates. -->
-								<script src="https://d3js.org/d3.v3.min.js"></script>
-								<script src="{% static 'trans_stats/js/population_data.js' %}"></script>
-							</div>
-	    				</div>
-	  				</div>
-				</div>
+				<div class="col-sm-6">
+					<canvas id="figure4.20a" width="200" height="150"></canvas>
+					<script src="{% static 'trans_stats/js/figure420a.js' %}""></script>
+					<canvas id="figure4.20b" width="200" height="150"></canvas>
+					<script src="{% static 'trans_stats/js/figure420b.js' %}""></script>
 			</div>
 		</div>
 	</div>
