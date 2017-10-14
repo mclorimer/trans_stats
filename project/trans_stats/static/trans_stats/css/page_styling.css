@@ -6,9 +6,13 @@ h1{
 }
 h2 {
 	text-align: center;
+	padding: 20px;
+}
+.headd{
+	margin-bottom: 40px;
 }
 h3 {
-	margin-top: 20px;
+	margin: 20px;
 }
 h4 {
 	margin-top:20px;
