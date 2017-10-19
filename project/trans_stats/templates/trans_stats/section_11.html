@@ -1,0 +1,41 @@
+{% load static %}
+
+<div class="container section">
+	<div class="row headd">
+		<div class="col-sm-12">
+			<h2>XI. Educational Attainment</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+			<p>Respondents were asked about the highest level
+			of education or degree that they had completed.
+			Thirteen percent (13%) of respondents had a high
+			school diploma or GED, or did not complete high
+			school. Forty percent (40%) had completed some
+			college but had not obtained a degree, 9% had
+			an associate’s degree, and 38% had received a
+			bachelor’s degree or higher (Figure 4.23).</p>
+			<canvas id="figure4.23" width="200" height="150"></canvas>
+			<script src="{% static 'trans_stats/js/figures/figure423.js' %}""></script>
+			<p>Throughout the report, educational attainment is
+			reported according to the categories reflected in
+			Figure 4.23. However, alternative categories are 
+			also presented here for comparison to the U.S.
+			population.36 The USTS sample overall reflected
+			higher educational attainment than the U.S.
+			population, which is common among internetbased
+			surveys.37 To account for differences in
+			educational attainment by age, USTS respondents
+			are compared to the U.S. population for two age
+			ranges: (1) ages 18 to 24 (Figure 4.24) and (2) ages
+			25 and older (Figure 4.25).38</p>
+		</div>
+		<div class="col-sm-6">
+			<canvas id="figure4.24" width="200" height="150"></canvas>
+			<script src="{% static 'trans_stats/js/figures/figure424.js' %}""></script>
+			<canvas id="figure4.25" width="200" height="150"></canvas>
+			<script src="{% static 'trans_stats/js/figures/figure425.js' %}""></script>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+{% load static %}
+
+<div class="container section">
+	<div class="row headd">
+		<div class="col-sm-12">
+			<h2>VI. Age</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>The age of respondents in the sample ranged
+			from 18 to 87. The overall age of respondents
+			in the sample was generally younger than that
+			in the U.S population. In addition to having a
+			younger age distribution, a disproportionally
+			large number of respondents reported an age
+			of 18 years old. Therefore a weight was created
+			to balance the representation in the sample of
+			those 18-year-old respondents in relation to the
+			rest of the sample. This weight was part of the
+			standard survey weight that was applied to all
+			results presented in this report (Figure 4.18).
+			Additionally, for certain findings in this report, a
+			“supplemental weight” was applied to adjust the
+			USTS sample to reflect the age distribution for
+			the U.S. population based on the ACS.23</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+		<h4>Figure 4.18a: Age of respondents by % in USTS</h4>
+		<canvas id="figure4.18a" width="200" height="150"></canvas>
+		<script src="{% static 'trans_stats/js/figures/figure418a.js' %}""></script>
+		</div>
+		<div class="col-sm-6">
+		<h4>Figure 4.18b: Age by % in US population</h4>
+		<canvas id="figure4.18b" width="200" height="150"></canvas>
+		<script src="{% static 'trans_stats/js/figures/figure418b.js' %}""></script>
+		</div>
+	</div>
+</div>
