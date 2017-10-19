@@ -1,76 +1,63 @@
+{% extends "trans_stats/_base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<title>Stats US Map</title>
-<meta charset="utf-8">
-<head>
+
+{% block title %}
+	Chapter 4: A Portrait of USTS Respondents
+{% endblock title %}
+
+{% block head %}
 	<!-- css styling for the US map -->
 	<link rel="stylesheet" type="text/css" href="{% static 'trans_stats/css/trans_stats_us_map.css' %}">
-	<!-- css styling for table 4.1 -->
-	<link rel="stylesheet" type="text/css" href="{% static 'trans_stats/css/table_styling.css' %}">
 	<!-- css styling for page -->
 	<link rel="stylesheet" type="text/css" href="{% static 'trans_stats/css/page_styling.css' %}">
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<!-- chart.js -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
-	<!-- chart js library that allows for labels inside pie slices -->
-	<script src="{% static 'trans_stats/js/libraries/ChartPieceLabel.js' %}"></script>
-</head>
-
-<body>
-	{% include "trans_stats/top_part.html" %}
+	{{block.super}}
+{% endblock head %}
 
 
-	{% include "trans_stats/section_1.html" %}
+
+{% block body %}
+	{% include "trans_stats/sections/top_part.html" %}
 
 
-	{% include "trans_stats/section_2.html" %}
+	{% include "trans_stats/sections/section_1.html" %}
 
 
-	{% include "trans_stats/section_3.html" %}
+	{% include "trans_stats/sections/section_2.html" %}
+
+
+	{% include "trans_stats/sections/section_3.html" %}
 
 	
-	{% include "trans_stats/section_4.html" %}
+	{% include "trans_stats/sections/section_4.html" %}
 
 
-	{% include "trans_stats/section_5.html" %}
+	{% include "trans_stats/sections/section_5.html" %}
 
 
-	{% include "trans_stats/section_6.html" %}
+	{% include "trans_stats/sections/section_6.html" %}
 
 
-	{% include "trans_stats/section_7.html" %}
+	{% include "trans_stats/sections/section_7.html" %}
 
 
-	{% include "trans_stats/section_8.html" %}
+	{% include "trans_stats/sections/section_8.html" %}
 
 	
-	{% include "trans_stats/section_9.html" %}
+	{% include "trans_stats/sections/section_9.html" %}
 
 
-	{% include "trans_stats/section_10.html" %}
+	{% include "trans_stats/sections/section_10.html" %}
 
 
-	{% include "trans_stats/section_11.html" %}
+	{% include "trans_stats/sections/section_11.html" %}
 
-
-	<!-- jquery and javascript -->
-	<div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script>
-		$(document).ready(function(){
-			$("#trans-pop-map").css("opacity", 1.0);
-			$("#trans-pop-map").hover(function(){
-				$("#trans-pop-map").animate({opacity: 0.2}, 250);
-				$(".text").removeClass('hide');
-			}, function(){
-				$("#trans-pop-map").animate({opacity: 1.0}, 250);
-				$(".text").addClass('hide');
-			});
-		});
-		</script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<!-- jquery-->
+	<div id="jQuery">
+		<script src="{% static 'trans_stats/js/libraries/chapter_4_jquery.js' %}""></script>
 	</div>
-</body>
+
+{% endblock body %}
+
+
+
+<!-- section 1, 2, 9, 10  -->
