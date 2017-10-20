@@ -1,0 +1,38 @@
+h1 {
+	font-size: 100px;
+	text-shadow: 2px 2px #A8A8A8;
+}
+
+h2 {
+	font-size: 80px;
+	margin-top: 12%;
+	text-shadow: 1.5px 1.5px #A8A8A8;
+}
+
+p {
+	font-size: 25px;
+	text-shadow: 1px 1px #A8A8A8;
+}
+
+hr {
+	border-top: 2px solid #FFFFFF;
+}
+
+html, body {
+	height: 100%;
+}
+
+.hero {
+	background-color: #bcd5d1;
+	height: 80%;
+	transform: skew(-3deg) rotate(-3deg);
+  	box-shadow: 1px 3px 30px rgba(0,0,0,0.4);
+  	margin-top: -5%;
+}
+
+.unskew {
+	transform: skew(3deg) rotate(3deg);
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Secular One', sans-serif;
+}

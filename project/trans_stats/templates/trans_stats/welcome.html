@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to Trans-Stats.us!</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'trans_stats/css/welcome_styling.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
+    </head>
+    <body>
+    	<div class="container-fluid hero">
+    		<div class="row">
+    			<div class="col-lg-12">
+    				<div id="wrapper-1">
+	  					<h2 class="unskew">Welcome to</h2>
+	  				</div>
+	  				<div id="wrapper-2">
+	  					<h1 class="unskew">trans-stats.us</h1>
+	  				</div>
+	  				<div id="wrapper-3">
+	  					<hr class="unskew" width="50%">
+	  					<p class="unskew">Your source for transgender statistics</p>
+	  				</div>
+  				</div>
+  			</div>
+  		</div>
+  		<script>
+  			$(document).ready(function(){
+  				$("#wrapper-2").hide();
+  				$('#wrapper-3').hide();
+  				$("#wrapper-1").addClass('animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  					$(this).removeClass('animated fadeInDown');
+  					$('#wrapper-2').show().addClass('animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  						$(this).removeClass('animated fadeInDown');
+  						$('#wrapper-3').show().addClass('animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  							$(this).removeClass('animated fadeInDown');
+  						});
+  					});
+  				});
+  			});
+  		</script>
+    </body>
+</html>
