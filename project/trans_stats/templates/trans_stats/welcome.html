@@ -37,33 +37,52 @@
                <div class="col-lg-4">
                   <div id="wrapper-4">
                      <img src="{% static 'trans_stats/images/flag.png' %}" class="center-block">
-                     <p>This project visualizes data garnered from the 2015 US Trans Survey report.
-                     it includes data representing over 27,000 respondents in the United States alone,
-                     including US territories.</p>
+                     <p class="icon_p">The 2015 U.S. Trans Survey Report included roughly 27,000 respondents
+                     from across the United States, including all 50 states and U.S. territories.</p>
                   </div>
                </div>
                <div class="col-lg-4">
-                  <div class="wrapper-5">
+                  <div id="wrapper-5">
                      <img src="{% static 'trans_stats/images/donut.png' %}" class="center-block">
+                     <p class="icon_p">This website features interactive charts displaying information from a 
+                     wide variety of sections from the report. You can hover over these charts to see the 
+                     data within them.</p>
                   </div>
                </div>
                <div class="col-lg-4">
-                  <div class="wrapper-6">
+                  <div id="wrapper-6">
                      <img src="{% static 'trans_stats/images/boygirl.png' %}" class="center-block">
+                     <p class="icon_p">In addition, this study focuses on a variety of people from all
+                     across the gender spectrum. From Male-to-Female, Female-to-Male, and everyone in between
+                     (or neither!)</p>
                   </div>
                </div>
             </div>
   		</div>
   		<script>
   			$(document).ready(function(){
+                var aniEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
   				$("#wrapper-2").hide();
   				$('#wrapper-3').hide();
-  				$("#wrapper-1").addClass('animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $("#wrapper-4").hide();
+                $('#wrapper-5').hide();
+                $("#wrapper-6").hide();
+
+  				$("#wrapper-1").addClass('animated fadeInDown').one(aniEnd, function(){
   					$(this).removeClass('animated fadeInDown');
-  					$('#wrapper-2').show().addClass('animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  					$('#wrapper-2').show().addClass('animated fadeInDown').one(aniEnd, function(){
   						$(this).removeClass('animated fadeInDown');
-  						$('#wrapper-3').show().addClass('animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  						$('#wrapper-3').show().addClass('animated fadeInDown').one(aniEnd, function(){
   							$(this).removeClass('animated fadeInDown');
+                            $('#wrapper-4').show().addClass('animated fadeInLeft').one(aniEnd, function(){
+                                $(this).removeClass('animated fadeInLeft');
+                            });
+                            $('#wrapper-5').show().addClass('animated fadeInUp').one(aniEnd, function(){
+                                $(this).removeClass('animated fadeInUp');
+                            });
+                            $('#wrapper-6').show().addClass('animated fadeInRight').one(aniEnd, function(){
+                                $(this).removeClass('animated fadeInRight');
+                            });
   						});
   					});
   				});
