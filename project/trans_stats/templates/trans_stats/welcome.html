@@ -13,21 +13,46 @@
         <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
     </head>
     <body>
+    <nav class="navbar fixed-top navbar-light bg-faded">
+      <a class="navbar-brand" href="#">
+      <img src="{% static 'trans_stats/images/logo.png' %}" width="110" height="40" class="d-inline-block align-top" alt="">
+      </a>
+    </nav>
     	<div class="container-fluid hero">
-    		<div class="row">
+    		<div class="row unskew">
     			<div class="col-lg-12">
     				<div id="wrapper-1">
-	  					<h2 class="unskew">Welcome to</h2>
+	  					<h2>Welcome to</h2>
 	  				</div>
 	  				<div id="wrapper-2">
-	  					<h1 class="unskew">trans-stats.us</h1>
+	  					<h1>trans-stats.us</h1>
 	  				</div>
 	  				<div id="wrapper-3">
-	  					<hr class="unskew" width="50%">
-	  					<p class="unskew">Your source for transgender statistics</p>
+	  					<hr width="50%">
+	  					<p>Your source for transgender statistics</p>
 	  				</div>
   				</div>
-  			</div>
+         </div>
+            <div class="row unskew">
+               <div class="col-lg-4">
+                  <div id="wrapper-4">
+                     <img src="{% static 'trans_stats/images/flag.png' %}" class="center-block">
+                     <p>This project visualizes data garnered from the 2015 US Trans Survey report.
+                     it includes data representing over 27,000 respondents in the United States alone,
+                     including US territories.</p>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="wrapper-5">
+                     <img src="{% static 'trans_stats/images/donut.png' %}" class="center-block">
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="wrapper-6">
+                     <img src="{% static 'trans_stats/images/boygirl.png' %}" class="center-block">
+                  </div>
+               </div>
+            </div>
   		</div>
   		<script>
   			$(document).ready(function(){
