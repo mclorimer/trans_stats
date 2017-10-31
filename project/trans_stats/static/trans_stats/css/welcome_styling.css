@@ -20,6 +20,7 @@ hr {
 
 html, body {
 	height: 100%;
+	overflow: scroll;
 }
 
 .hero {
@@ -41,4 +42,39 @@ html, body {
 .icon_p {
 	padding-left: 50px;
 	padding-right: 50px;
+}
+
+.youtube {
+	display: inline-block;
+}
+
+.embed-container {  
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%;
+	position: relative;
+    margin: auto auto 0 auto;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}
+
+#about {
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 35px;
+}
+
+#about-section-row {
+	height:300px;
+}
+
+.about-p {
+	font-size: 18px;
 }
